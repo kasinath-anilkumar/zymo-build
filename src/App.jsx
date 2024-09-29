@@ -13,6 +13,7 @@ import Featured from "./Components/Featured/Featured"
 import Reviews from "./Components/Reviews/Reviews"
 import Footer from "./Components/Footer/Footer"
 import CarRentalComponent from './Components/Footer/CarRentalComponent';
+import About from './Components/Footer/About';
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
     <Navbar/>
     <Banner/>
     <Zymo/>
+    <About/>
     <Benefits/>
     <Refer/>
     <Cars/>
