@@ -3,13 +3,13 @@ import React from 'react'
 
 const AboutLanding = () => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 shadow-2xl container rounded'>
             <h4 className='text-3xl md:text-4xl font-bold p-4 md:p-6 col-span-full text-center'>About Us</h4>
 
             <div className='flex justify-center'>
                 <img
                     src="https://s3-us-west-2.amazonaws.com/issuewireassets/primg/108145/zymo-logo355809676.jpg"
-                    className='img-fluid w-3/4 md:w-2/3 lg:w-1/2'
+                    className='img-fluid p-5'
                     alt="About Us Image"
                 />
             </div>
