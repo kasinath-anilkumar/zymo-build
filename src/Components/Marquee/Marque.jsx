@@ -6,9 +6,9 @@ import specialOffer from "/specialOffer.png";
 
 const Marque = () => {
     return (
-        <div className='shadow-md container rounded-3xl my-8'>
+        <div className='shadow-lg container rounded-3xl my-8'>
             <div className="text-center w-100">
-                <h1 className='text-4xl mb-5 font-bold'>OFFERS</h1>
+                <h1 className='text-4xl font-bold p-5'>OFFERS</h1>
             </div>
             <marquee behavior="" direction="" scrollamount="15">
                 <div className='d-flex mb-4'>
