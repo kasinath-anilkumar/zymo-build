@@ -1,16 +1,45 @@
-import React from 'react'
-import Banner_app from "/Banner_app.jpg"
+import React, { useState, useEffect } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
 const Banner = () => {
-  return (
-    <div className="justify-center">
-      <div className=" md:py-11 md:px-20 px-10 py-5">
-      <img src={Banner_app} alt="Banner_app" 
-      className=" border-gray-900 border-2 border-solid rounded-2xl"
-      />
-      </div>
-    </div>
-  )
-}
+    const [activeIndex, setActiveIndex] = useState(0);
+    const totalItems = 2;
 
-export default Banner
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((prevIndex) => (prevIndex + 1) % totalItems);
+        }, 3000);  // Increased interval time for smoother transitions
+
+        return () => clearInterval(interval); 
+    }, []);
+
+    return (
+        <Carousel
+            className='mx-5'
+            activeIndex={activeIndex}
+            onSelect={setActiveIndex}
+            slide
+            wrap={true}
+            controls={false}
+        >
+            <Carousel.Item style={{ height: '630px', padding: '20px' }}>
+                <img
+                    className="d-block w-100 img-fluid"
+                    src="https://zymo.app/static/media/heroSecImage.012372867a73d0320a1b.jpg"
+                    alt="First slide"
+                    style={{ height: '100%', objectFit: 'cover', borderRadius: '5px', border: 'solid 2px', padding: '2px' }}
+                />
+            </Carousel.Item>
+            <Carousel.Item style={{ height: '630px', padding: '20px' }}>
+                <img
+                    className="d-block w-100 img-fluid"
+                    src="https://pbs.twimg.com/media/FxCWQ3rXoAANmrX?format=jpg&name=large"
+                    alt="Third slide"
+                    style={{ height: '100%', objectFit: 'cover', borderRadius: '5px', border: 'solid 2px', padding: '2px' }}
+                />
+            </Carousel.Item>
+        </Carousel>
+    );
+};
+
+export default Banner;
