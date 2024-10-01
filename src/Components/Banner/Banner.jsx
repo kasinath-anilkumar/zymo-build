@@ -8,45 +8,44 @@ const Banner = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prevIndex) => (prevIndex + 1) % totalItems);
-        }, 3000);  // Increased interval time for smoother transitions
+        }, 3000);
 
-        return () => clearInterval(interval); 
+        return () => clearInterval(interval);
     }, []);
 
     return (
         <Carousel
-            className='mx-24'
+            className='mx-3' // Adjusts margin for responsiveness
             activeIndex={activeIndex}
             onSelect={setActiveIndex}
             slide
             wrap={true}
             controls={false}
         >
-            <Carousel.Item style={{ height: '630px', padding: '20px' }}>
+            <Carousel.Item style={{ padding: '10px' }}>
                 <img
                     className="d-block w-100 img-fluid"
                     src="https://zymo.app/static/media/heroSecImage.012372867a73d0320a1b.jpg"
                     alt="First slide"
-                    style={{ height: '100%', objectFit: 'cover', borderRadius: '5px', border: 'solid 2px', padding: '2px' }}
+                    style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '5px', padding: '2px' }}
                 />
             </Carousel.Item>
-            <Carousel.Item style={{ height: '630px', padding: '20px' }}>
+            <Carousel.Item style={{ padding: '10px' }}>
                 <img
                     className="d-block w-100 img-fluid"
                     src="https://pbs.twimg.com/media/FxCWQ3rXoAANmrX?format=jpg&name=large"
-                    alt="Third slide"
-                    style={{ height: '100%', objectFit: 'cover', borderRadius: '5px', border: 'solid 2px', padding: '2px' }}
+                    alt="Second slide"
+                    style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '5px', padding: '2px' }}
                 />
             </Carousel.Item>
-            <Carousel.Item style={{ height: '630px', padding: '20px' }}>
+            <Carousel.Item style={{ padding: '10px' }}>
                 <img
                     className="d-block w-100 img-fluid"
                     src="https://s3-us-west-2.amazonaws.com/issuewireassets/primg/108145/zymo-india297080116.jpg"
                     alt="Third slide"
-                    style={{ height: '100%', objectFit: 'cover', borderRadius: '5px', border: 'solid 2px', padding: '2px' }}
+                    style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '5px', padding: '2px' }}
                 />
             </Carousel.Item>
-            
         </Carousel>
     );
 };
