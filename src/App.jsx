@@ -15,6 +15,7 @@ import Footer from "./Components/Footer/Footer"
 import CarRentalComponent from './Components/Footer/CarRentalComponent';
 import AboutLanding from './Components/About/AboutLanding';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Marque from './Components/Marquee/Marque';
 
 
 
@@ -31,6 +32,7 @@ function App() {
     <Navbar/>
     <Banner/>
     <Zymo/>
+    <Marque/>
     <AboutLanding/>
     <Benefits/>
     <Refer/>
