@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const Banner = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const totalItems = 2;
+    const totalItems = 3;
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -38,6 +38,15 @@ const Banner = () => {
                     style={{ height: '100%', objectFit: 'cover', borderRadius: '5px', border: 'solid 2px', padding: '2px' }}
                 />
             </Carousel.Item>
+            <Carousel.Item style={{ height: '630px', padding: '20px' }}>
+                <img
+                    className="d-block w-100 img-fluid"
+                    src="https://s3-us-west-2.amazonaws.com/issuewireassets/primg/108145/zymo-india297080116.jpg"
+                    alt="Third slide"
+                    style={{ height: '100%', objectFit: 'cover', borderRadius: '5px', border: 'solid 2px', padding: '2px' }}
+                />
+            </Carousel.Item>
+            
         </Carousel>
     );
 };
