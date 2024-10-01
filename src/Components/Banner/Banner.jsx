@@ -15,7 +15,7 @@ const Banner = () => {
 
     return (
         <Carousel
-            className='mx-5'
+            className='mx-24'
             activeIndex={activeIndex}
             onSelect={setActiveIndex}
             slide
