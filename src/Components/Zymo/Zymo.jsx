@@ -15,7 +15,7 @@ const navigation = [
 
 const Zymo = () => {
   return (
-    <div className="text-center py-10 flex flex-col items-center justify-center">
+    <div className="text-center py-10 flex flex-col items-center justify-center shadow-2xl container rounded-2xl my-5">
       <h1 className="text-4xl font-bold mb-8">Why Zymo?</h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 sm:gap-28 gap-16 p-10">
         {navigation.map((item, index) => (
